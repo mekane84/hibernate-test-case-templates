@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD//EN"
+  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false">
+  <class name="entities.Person" table="PERSON">
+    <cache usage="read-write"/>
+
+    <id name="oid" column="PERSON_ID" type="long" unsaved-value="null">
+      <generator class="org.hibernate.id.Assigned"/>
+    </id>
+
+    <joined-subclass name="entities.UIPerson" table="UI_PERSON">
+      <key column="PERSON_ID"/>
+    </joined-subclass>
+
+
+    <joined-subclass name="entities.NonUIPerson" table="NON_UI_PERSON">
+      <key column="PERSON_ID"/>
+    </joined-subclass>
+
+  </class>
+</hibernate-mapping>

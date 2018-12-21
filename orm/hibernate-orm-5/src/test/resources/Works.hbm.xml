@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD//EN"
+  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false">
+  <class name="entities.Works" table="WORKS">
+    <cache usage="read-write"/>
+
+    <id name="oid" column="WORKS_ID" type="long" unsaved-value="null">
+      <generator class="org.hibernate.id.Assigned"/>
+    </id>
+
+  </class>
+</hibernate-mapping>
