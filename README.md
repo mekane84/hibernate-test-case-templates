@@ -1,4 +1,4 @@
-# Hibernate Test Case Templates
+# Hibernate Test Case - Cache with joined subclass not working
 
 Attempting ot cache a joined subclass inheritance method does not work.
 
